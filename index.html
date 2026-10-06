@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Page Website</title>
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex; justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff; text-decoration: none;
+      margin: 0 15px; font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
+
+    header {
+      height: 100vh;
+      background: url('https://picsum.photos/1920/1080?grayscale') center/cover no-repeat;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      color: white; text-align: center;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px; margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: ""; display: block;
+      width: 60px; height: 4px;
+      background: #ffd700;
+      margin: 10px auto 0;
+    }
+
+    #about p { text-align: center; max-width: 700px; margin: auto; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service {
+      background: #f4f4f4; padding: 20px;
+      border-radius: 10px; text-align: center;
+      transition: transform 0.3s;
+    }
+    .service:hover { transform: translateY(-10px); }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .portfolio img {
+      width: 100%; border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .portfolio img:hover { transform: scale(1.05); }
+
+    #contact p { text-align: center; font-size: 1.1rem; }
+
+    footer {
+      background: #222; color: white;
+      text-align: center; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to My Website</h1>
+    <p>Simple. Modern. Responsive.</p>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <p>
+      This is a modern one-page website built only with HTML and CSS.
+      It is fully responsive, clean, and professional for portfolios or business use.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Web Design</h3>
+        <p>Clean and modern designs that look great on any device.</p>
+      </div>
+      <div class="service">
+        <h3>Development</h3>
+        <p>Fast, responsive, and accessible websites for all users.</p>
+      </div>
+      <div class="service">
+        <h3>Branding</h3>
+        <p>Helping your brand stand out with unique identity design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio">
+      <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
+      <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
+      <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
+      <img src="https://picsum.photos/400/300?random=4" alt="Project 4">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: example@email.com</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <footer>
+    &copy; 2025 My Website. All rights reserved.
+  </footer>
+
+</body>
+</html>
